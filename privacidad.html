@@ -10,30 +10,21 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.46.0/dist/tabler-icons.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=1">
 <style>
+  .legal-hero { padding-top: calc(var(--header-h) + 60px); }
   .legal { max-width: 760px; margin: 0 auto; text-align: left; }
-  .legal h2 { font-family: var(--font-head); font-size: 1.3rem; color: var(--navy-dark); margin: 2.2rem 0 .8rem; }
+  .legal h2 { font-family: var(--font-head); font-weight: 600; font-size: 1.3rem; color: var(--navy); margin: 2.2rem 0 .8rem; }
   .legal h2:first-of-type { margin-top: 0; }
   .legal p, .legal li { color: var(--ink-soft); line-height: 1.7; }
   .legal ul { padding-left: 1.4rem; margin: .6rem 0; list-style: disc; }
   .legal li { margin-bottom: .4rem; }
-  .legal .updated { color: var(--navy-mid); font-size: .85rem; margin-bottom: 2.4rem; }
-  .legal strong { color: var(--navy-dark); }
-  .legal a { color: var(--navy); }
-
-  /* Esta página no tiene hero oscuro debajo del header: forzar el estado "sólido" siempre */
-  body.light-header header.site { background: rgba(246,247,249,.96); backdrop-filter: blur(10px); border-bottom-color: var(--line); box-shadow: 0 6px 24px rgba(7,19,40,.08); }
-  body.light-header .wordmark-name { color: var(--navy-dark); }
-  body.light-header .wordmark-role { color: var(--navy-mid); }
-  body.light-header nav.desk a { color: var(--ink); }
-  body.light-header nav.desk a:hover { color: var(--gold-hover); }
-  body.light-header .h-cta .btn { background: var(--gold); border-color: var(--gold); color: var(--white); }
-  body.light-header .h-cta .btn:hover { background: var(--gold-hover); border-color: var(--gold-hover); }
-  body.light-header .burger span { background: var(--navy-dark); filter: none; }
+  .legal .updated { color: var(--muted); font-size: .85rem; margin-bottom: 2.4rem; }
+  .legal strong { color: var(--navy); }
+  .legal a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); }
 
   @media (max-width: 768px) {
     .legal { text-align: center; }
@@ -41,52 +32,63 @@
   }
 </style>
 </head>
-<body class="light-header">
+<body>
 
 <div class="burger" id="burger" role="button" tabindex="0" aria-label="Abrir menú"><span></span><span></span><span></span></div>
 <div id="moverlay"></div>
 <nav id="mnav">
   <div class="mnav-word">
-    <span class="wordmark-name">Silvina Sierra</span>
-    <span class="wordmark-role">Estudio Jurídico</span>
+    <span class="wm-eyebrow">Estudio Jurídico</span>
+    <span class="wm-name">Silvina Sierra</span>
+    <span class="wm-role">Abogada</span>
+    <span class="wm-divider"></span>
+    <span class="wm-since">Desde 2009</span>
   </div>
-  <div class="mnav-divider"></div>
   <a href="index.html">Inicio</a>
-  <a href="index.html#nosotros">Quiénes somos</a>
   <a href="index.html#areas">Áreas de práctica</a>
-  <a href="index.html#equipo">Equipo</a>
+  <a href="index.html#empresas">Empresas</a>
+  <a href="index.html#servicios">Servicios complementarios</a>
   <a href="index.html#contacto">Contacto</a>
-  <a href="https://wa.me/5491133553539?text=%F0%9F%91%8B%20Hola,%20quiero%20reservar%20una%20consulta." target="_blank" rel="noopener" class="btn btn-gold">WhatsApp</a>
+  <p class="mnav-location"><i class="ti ti-map-pin"></i><span> CABA / Provincia de Buenos Aires</span></p>
+  <a href="https://wa.me/5491133553539?text=%F0%9F%91%8B%20Hola,%20quiero%20reservar%20una%20consulta." target="_blank" rel="noopener" class="btn btn-navy"><i class="fa-brands fa-whatsapp"></i> Consultar</a>
 </nav>
 
 <header class="site" id="siteHeader">
   <div class="h-inner">
     <a href="index.html" class="h-logo">
-      <span class="wordmark-name">Silvina Sierra</span>
-      <span class="wordmark-role">Estudio Jurídico</span>
+      <span class="wm-eyebrow">Estudio Jurídico</span>
+      <div class="wm-name-wrap">
+        <span class="wm-name">Silvina Sierra</span>
+        <div class="wm-role-row">
+          <span class="wm-role">Abogada</span>
+          <span class="wm-divider"></span>
+        </div>
+      </div>
+      <span class="wm-since">Desde 2009</span>
     </a>
     <nav class="desk">
-      <a href="index.html#nosotros">Quiénes somos</a>
+      <a href="index.html">Inicio</a>
       <a href="index.html#areas">Áreas de práctica</a>
-      <a href="index.html#equipo">Equipo</a>
+      <a href="index.html#empresas">Empresas</a>
+      <a href="index.html#servicios">Servicios complementarios</a>
       <a href="index.html#contacto">Contacto</a>
     </nav>
-    <div class="h-cta">
-      <a href="https://wa.me/5491133553539?text=%F0%9F%91%8B%20Hola,%20quiero%20reservar%20una%20consulta." target="_blank" rel="noopener" class="btn btn-gold">Consultar por WhatsApp</a>
+    <div class="h-right">
+      <a href="https://wa.me/5491133553539?text=%F0%9F%91%8B%20Hola,%20quiero%20reservar%20una%20consulta." target="_blank" rel="noopener" class="btn btn-navy"><i class="fa-brands fa-whatsapp"></i> Consultar</a>
     </div>
+    <span class="h-location"><i class="ti ti-map-pin"></i><span> CABA / PBA</span></span>
   </div>
 </header>
 
 <main>
-  <section class="section" style="padding-top:calc(var(--header-h) + 60px);">
-    <div class="container" style="text-align:center;">
-      <p class="eyebrow eyebrow-dark">Legal</p>
-      <h2 class="h2">Política de Privacidad<br>y Aviso Legal.</h2>
+  <section class="section legal-hero">
+    <div class="wrap" style="text-align:center;">
+      <h2 class="section-title"><span class="tline"></span><span class="st-text">Política de Privacidad</span><span class="tline"></span></h2>
     </div>
   </section>
 
   <section class="section" style="padding-top:0;">
-    <div class="container legal">
+    <div class="wrap legal">
       <p class="updated">Última actualización: septiembre de 2026.</p>
 
       <h2>1. Responsable del tratamiento de datos</h2>
@@ -131,28 +133,25 @@
   </section>
 </main>
 
-<footer class="site">
-  <div class="container footer-top">
+<footer class="site" id="contacto">
+  <div class="wrap footer-main">
     <div class="footer-brand">
-      <p class="footer-name">Estudio Jurídico Dra. Silvina Sierra</p>
-      <p class="footer-tagline">Asesoramiento legal integral para personas y empresas. CABA y Provincia de Buenos Aires.</p>
+      <div class="wm-name-wrap">
+        <span class="wm-name">Silvina Sierra</span>
+        <div class="wm-role-row">
+          <span class="wm-role">Abogada</span>
+          <span class="wm-divider"></span>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h3>Navegación</h3>
-      <a href="index.html#nosotros">Quiénes somos</a>
-      <a href="index.html#areas">Áreas de práctica</a>
-      <a href="index.html#equipo">Equipo</a>
-      <a href="index.html#contacto">Contacto</a>
-    </div>
-    <div class="footer-col">
-      <h3>Contacto</h3>
-      <a href="https://wa.me/5491133553539?text=%F0%9F%91%8B%20Hola,%20te%20escribo%20desde%20el%20pie%20de%20pagina,%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">+54 9 11 3355-3539</a>
-      <p>CABA y Provincia de Buenos Aires</p>
-      <p>Lunes a viernes, 9 a 19 hs</p>
+    <p class="footer-location"><i class="ti ti-map-pin"></i><span> Ciudad Autónoma de Buenos Aires · Provincia de Buenos Aires</span></p>
+    <div class="footer-social">
+      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Estudio Jurídico Dra. Silvina Victoria Sierra. Todos los derechos reservados.</p>
+    <p>© 2026 Estudio Jurídico Silvina Sierra. Todos los derechos reservados.</p>
     <p><a href="privacidad.html">Política de Privacidad</a></p>
     <p>Sitio desarrollado por <a href="https://instagram.com/sageeDev" target="_blank" rel="noopener">@sageeDev</a></p>
   </div>
